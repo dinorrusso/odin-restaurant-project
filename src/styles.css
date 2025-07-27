@@ -1,0 +1,182 @@
+@font-face {
+    font-family: 'italiannoregular';
+    src: url('italianno-regular-webfont.woff2') format('woff2'),
+         url('italianno-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+/* reset */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+body {
+  background: white;
+  /* max-width: max-content; */
+  margin-inline: auto;
+}
+header {
+  position: absolute; /* Position the header absolutely */
+  top: 0; /* Align to the top of the viewport */
+  width: 100%; /* Take full width */
+  background: transparent; /* Make background transparent */
+  z-index: 20; /* Ensure it's above the hero section */
+}
+nav {
+  padding-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem 1rem;
+  justify-content: center;
+  align-items: flex-end;
+}
+.nav-btn {
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  color: white;
+  background-color: transparent; /* Make button background transparent */
+  border: none;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 1.5rem;
+}
+.nav-btn:hover{
+  /* text-decoration: underline; */
+  opacity: 0.75;
+}
+
+/* New class for the hero section, which now wraps the H1, logo, H2 */
+.home-hero-section {
+  display: flex;
+  flex-direction: column; /* Stack children vertically */
+  align-items: center;    /* Center children horizontally */
+  justify-content: center; /* Center content vertically within the hero area */
+  min-height: 65vh;
+  background:
+    linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+    url('./images/hero-home.jpg') center/cover no-repeat;
+  background-size: cover; /* Ensure background image covers the area */
+  background-position: center; /* Center the background image */
+  color: white; /* Default text color for hero section */
+  padding-top: 100px; /* Add padding to push content below the header. Adjust as needed. */
+  padding-bottom: 2rem; /* Add some padding at the bottom of the hero section */
+  width: 100%; /* Added to make it take full width */
+}
+
+.home h1,
+.menu h1,
+.about h1 {
+  font-family: 'italiannoregular', sans-serif;
+  font-size: 6rem;
+  color: white; /* Ensure text in hero is white */
+  text-align: center; /* Added to center wrapped text */
+}
+.about h1 {
+  color: black; 
+}
+.Italian {
+  color: white;
+  font-family: 'italiannoregular', sans-serif;
+  font-size: 2.75rem;
+  font-style: italic;
+  text-align: center; /* Added to center wrapped text */
+}
+
+.home-logo {
+  width: 200px;      
+  height: 150px;
+  background-image: url('./images/johnny-automatic-spaghetti.svg');  /* path to your image */
+  background-size: contain;    /* scale the image to fit */
+  background-repeat: no-repeat; /* don't tile the image */
+  background-position: center;  /* center the image inside the div */
+  filter: invert(100%);
+}
+
+.menu {
+  display: flex;
+  flex-direction: column; /* Stack children vertically */
+  align-items: center;    /* Center children horizontally */
+  justify-content: center; /* Center content vertically within the hero area */
+  min-height: 80vh; /* Changed back to 80vh */
+  background:
+    linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+    url('./images/hero-menu.jpg') center/cover no-repeat;
+  background-size: cover; /* Ensure background image covers the area */
+  background-position: center; /* Center the background image */
+  color: white; /* Default text color for hero section */
+  padding-top: 100px; /* Add padding to push content below the header. Adjust as needed. */
+  padding-bottom: 2rem; /* Add some padding at the bottom of the hero section */
+  width: 100%; /* Added to make it take full width */
+}
+
+/*------------------------------------------------*/
+/* This targets the #content div in template.html */
+#content { 
+  display: flex; /* Changed to flexbox */
+  flex-direction: column; /* Stack children vertically */
+  align-items: center; /* Center content horizontally within the main #content area */ 
+}
+.home-content {
+  background-color: white;
+  padding: 1rem 1rem 4rem;
+  /* Changed margin-top to a positive value to remove overlap */
+  /* margin-top: 1rem;  */
+  border-radius: 1.25rem 1.25rem 0 0;
+  box-shadow: 0 -10px 15px -10px rgba(0,0,0,0.1);
+  width: 80%;
+  /* width: min(90%, 700px); responsive width without media queries */
+  margin-left: auto;
+  margin-right: auto;
+  /* Removed grid-column as it's no longer a direct grid item of #content */
+  /* grid-column: 1 / -1; */ 
+  z-index: 10; /* Ensure it appears above the hero section if there's overlap */
+  position: relative; /* Needed for z-index to work */
+}
+.home-content h2 {
+  font-size: 3rem;
+}
+.home-content p {
+  margin-top: 1rem;
+  font-size: 1rem;
+  line-height: 1.5;
+
+}
+.menu-content {
+  color: black;
+  background-color: white;
+  opacity: .5;
+  padding: 2rem 1rem 4rem;
+  /* Changed margin-top to a positive value to remove overlap */
+  margin-top: 1rem; 
+  border-radius: 1.25rem 1.25rem 0 0;
+  box-shadow: 0 -10px 15px -10px rgba(0,0,0,0.1);
+  width : 85%;
+  margin-left: auto;
+  margin-right: auto;
+  /* Removed grid-column as it's no longer a direct grid item of #content */
+  /* grid-column: 1 / -1; */ 
+  z-index: 10; /* Ensure it appears above the hero section if there's overlap */
+  position: relative; /* Needed for z-index to work */
+}
+#hook {
+  font-size: 1.5rem;
+  font-weight: 700;
+}

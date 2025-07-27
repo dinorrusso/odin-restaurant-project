@@ -1,0 +1,55 @@
+export function displayHome(){
+  const pageContent = document.querySelector('#content');
+  pageContent.className = 'home'; // Applies .home to #content
+  // Clear existing content before appending new sections
+  pageContent.innerHTML = ''; 
+  pageContent.appendChild(buildHomePage());
+}
+
+function buildHomePage(){
+  const fragment = document.createDocumentFragment(); // Use a fragment to append multiple top-level elements efficiently
+
+  // 1. Create the Hero Section
+  const heroSection = document.createElement("div");
+  heroSection.className = "home-hero-section"; // Renamed class to avoid conflict and be more specific
+  // The 'home-hero' styling (background, min-height) will be applied to this section in CSS
+  // The centering of children (h1, logo, h2) will also be handled by this section's CSS
+
+  let element = document.createElement("h1");
+  element.textContent = "Guido's Taste of Italy";
+  heroSection.appendChild(element);
+
+  element = document.createElement("div");
+  element.className = "home-logo";
+  heroSection.appendChild(element);
+
+  element = document.createElement("h2");
+  element.className = "Italian";
+  element.textContent = "Il gusto dell'Italia di Guido";
+  heroSection.appendChild(element);
+
+  fragment.appendChild(heroSection); // Add hero section to fragment
+
+  // 2. Create the Home Content Section (this will naturally appear below the heroSection)
+  const homeContentDiv = document.createElement("div");
+  homeContentDiv.className = "home-content"; // This will apply the white background, padding, etc.
+  element = document.createElement("h2");
+  element.textContent = "Welcome to Guido's Taste of Italy";
+  homeContentDiv.appendChild(element);
+  element = document.createElement("p");
+  element.textContent = "At Guido's Taste of Italy, we bring the heart and soul of Italy’s home-style cooking straight to your plate. Our kitchen is filled with the rich aromas of family recipes passed down through generations — each bite bursting with authentic flavors made from the freshest, highest-quality ingredients.    Every day, our chef lovingly prepares a unique pasta special, crafted to showcase the best of Italian tradition with a personal touch. Whether it’s a creamy carbonara, a hearty ragù, or delicate handmade ravioli, you’ll taste the care and comfort in every forkful.";
+  homeContentDiv.appendChild(element);
+  element = document.createElement("p");
+  element.textContent = "Every day, our chef lovingly prepares a unique pasta special, crafted to showcase the best of Italian tradition with a personal touch. Whether it’s a creamy carbonara, a hearty ragù, or delicate handmade ravioli, you’ll taste the care and comfort in every forkful.";
+  homeContentDiv.appendChild(element);
+  element = document.createElement("p");
+  element.textContent = "Sit back, relax, and savor the simple pleasures of good company, warm hospitality, and food that tastes like a hug from Nonna herself.";
+  homeContentDiv.appendChild(element);
+  element = document.createElement("p");
+  element.textContent = "Come as a guest, leave as family.";
+  element.id = "hook";
+  homeContentDiv.appendChild(element);
+  fragment.appendChild(homeContentDiv); // Add home content section to fragment
+
+  return fragment; // Return the fragment containing both sections
+}
