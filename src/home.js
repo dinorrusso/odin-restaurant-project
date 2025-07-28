@@ -11,9 +11,7 @@ function buildHomePage(){
 
   // 1. Create the Hero Section
   const heroSection = document.createElement("div");
-  heroSection.className = "home-hero-section"; // Renamed class to avoid conflict and be more specific
-  // The 'home-hero' styling (background, min-height) will be applied to this section in CSS
-  // The centering of children (h1, logo, h2) will also be handled by this section's CSS
+  heroSection.className = "home-hero-section";
 
   let element = document.createElement("h1");
   element.textContent = "Guido's Taste of Italy";
@@ -30,7 +28,7 @@ function buildHomePage(){
 
   fragment.appendChild(heroSection); // Add hero section to fragment
 
-  // 2. Create the Home Content Section (this will naturally appear below the heroSection)
+  // 2. Create the Home Content Section 
   const homeContentDiv = document.createElement("div");
   homeContentDiv.className = "home-content"; // This will apply the white background, padding, etc.
   element = document.createElement("h2");

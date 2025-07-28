@@ -8,17 +8,17 @@ function buildMenuPage(){
 
   // 1. Create the Hero Section
   const heroSection = document.createElement("div");
-  heroSection.className = "menu-hero-section"; // Renamed class to avoid conflict and be more specific
-  // The 'home-hero' styling (background, min-height) will be applied to this section in CSS
-  // The centering of children (h1, logo, h2) will also be handled by this section's CSS
+  heroSection.className = "menu-hero-section"; 
 
-  // let element = document.createElement("h1");
-  // element.textContent = "Guido's Taste of Italy";
-  // heroSection.appendChild(element);
+  let element = document.createElement("div");
+  element.className = "menu-logo";
+  heroSection.appendChild(element);
 
-  // element = document.createElement("div");
-  // element.className = "home-logo";
-  // heroSection.appendChild(element);
+  element = document.createElement("h1");
+  element.textContent = "Menu";
+  heroSection.appendChild(element);
+
+  
 
   // element = document.createElement("h2");
   // element.className = "Italian";
