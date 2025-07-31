@@ -27,6 +27,7 @@ time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;
 }
+
 .home-body {
   background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('images/hero-home.jpg');
   background-size: cover; /* Cover the entire viewport */
@@ -61,7 +62,7 @@ time, mark, audio, video {
 }
 
 
-.menu-nav-title {
+.header-nav-title {
   font-size: clamp(1rem, calc(1rem + 1vw), 4rem);
   color: white;
 }
@@ -170,7 +171,7 @@ time, mark, audio, video {
   font-size: 1.5rem;
   font-weight: 700;
 }
-.menu-nav {
+.header-nav {
   padding: 10px;
   display: grid;
   /* Key change: Use a fixed minimum width (e.g., 150px) instead of min-content */

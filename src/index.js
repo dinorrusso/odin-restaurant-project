@@ -14,6 +14,7 @@ const buttons = document.querySelectorAll('button');
 buttons.forEach((btn) => {
   btn.addEventListener('click', function() {
     clearContent();
+    console.log(` ${btn.id} clicked`);
     switch (btn.id) {
   case "home":
     clearContent();
