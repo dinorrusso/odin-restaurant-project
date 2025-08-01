@@ -212,8 +212,14 @@ time, mark, audio, video {
   line-height: 1.2;
 }
 #content {
-  display: grid;
+  max-width: 1000px;
+  margin: 0 auto;
 }
+.menu {
+  max-width: 825px;
+  margin: 0 auto;
+}
+
 .menu-hero-section {
   
   display: grid;
@@ -243,8 +249,11 @@ time, mark, audio, video {
 #menu-sections button:hover {
   opacity: 0.75;
 }
-
 .menu-section {
+  width: 100%;
+  margin-bottom: 2rem;
+}
+.menu-section_zz {
   margin: 0 auto;
   /* padding: 10px; */
   display: grid;
@@ -257,12 +266,25 @@ time, mark, audio, video {
   font-size: 1.5rem;
   gap: 1rem;
 }
-.menu-section > h2 {
+/* .menu-section > h2 {
   grid-column: 1/-1;
   background-color: rgba(163, 18, 18, 0.3);
   font-size: 3rem;
+} */
+.menu-section-name {
+  background-color: rgba(0, 0, 0, 0.4);
+  color: white;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  
 }
-.menu-item {
+.menu-items {
+  display: flex;
+  flex-wrap: wrap;
+  
+  gap: 1rem;
+}
+.menu-itemzz {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -273,6 +295,14 @@ time, mark, audio, video {
   border-radius: 10px;
   line-height: 1.6;
   min-height: 565px;
+}
+.menu-item {
+  max-width: 400px; /* was 350 */
+  flex: 1 1 300px; /* Grow to fill, min width ~300px */
+  padding: 1rem;
+  background-color: white;
+  border-radius: 10px;
+  margin-bottom: 0.5rem;
 }
 .menu-item .item-name {
   font-size: 2.5rem;
@@ -301,4 +331,36 @@ time, mark, audio, video {
   font-size: 2rem;
   font-weight: 500;
 
+}
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}
+.area1,
+.area2,
+.area3 {
+  opacity: 0.5;
+  padding: 25px;
+  font-size: 2rem;
+  font-weight: 500;
+  min-height: 300px;
+}
+.area1 {
+  background: green;
+  color: white;
+}
+
+.area2 {
+  background: white;
+  color: black;
+}
+
+.area3 {
+  background: red;
+  color: white;
+
+}
+.whitelink{
+  color: white;
+  cursor: pointer;
 }

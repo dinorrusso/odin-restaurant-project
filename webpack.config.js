@@ -17,7 +17,7 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.(png|jpe?g|gif|svg)$/i,
+        test: /\.(png|jpe?g|gif|svg|avif|webp)$/i,
         type: 'asset/resource',  // This copies image files to the output folder and returns their URLs
       },
       {
